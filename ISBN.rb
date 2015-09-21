@@ -12,3 +12,10 @@ def verify_length(isbn_number)
 		false
 	end
 end
+
+def dash_removal_from_isbn(isbn_number)
+	if isbn_number.include?"-"
+		isbn_number.delete!"-"
+	end
+end
+	
