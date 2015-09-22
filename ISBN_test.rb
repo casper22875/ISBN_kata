@@ -13,7 +13,9 @@ def test_to_check_for_dash_removal
 	assert_equal("0321146530",dash_removal_from_isbn("0-321-14653-0"))
 end
 
-
+def test_to_check_for_space_removal
+	assert_equal("0321146530",space_removal_from_isbn("0 321 14653 0"))
+end
 
 
 
