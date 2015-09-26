@@ -54,4 +54,13 @@ def check_digit_validity(isbn_array_strings)
 		
 			end
 		
+def check_digit_contains_x(isbn)
+		isbn_number=isbn.split""
+		
+		if isbn_number[9]== "X" or isbn_number[9]== "x"
+		isbn_number[9]=10
+		end
+		
+		isbn_number[9]==10
+	end
 	

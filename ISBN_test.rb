@@ -40,7 +40,9 @@ def test_for_everything_thus_far
 		assert_equal(true,results4)
 end
 
-
+def test_for_an_X
+	assert_equal(true,check_digit_contains_x("080442957X"))
+end
 
 
 
