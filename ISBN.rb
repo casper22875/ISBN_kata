@@ -63,4 +63,32 @@ def check_digit_contains_x(isbn)
 		
 		isbn_number[9]==10
 	end
+
+def check_digit_valid_13(isbn)
+	isbn_number=isbn.split""
+	array=[]
+		
+		isbn_number.each do |value|
+		array << value.to_i
+		end
+	sum=0
+	check_digit = 0
 	
+			array.each_with_index do |value,index|
+				break if index == 12
+				if index % 2 == 0
+				sum += value * 1
+				else
+				sum += value * 3
+				end
+			end
+			sum=sum % 10
+			check_digit = (10-sum)
+			
+			if check_digit == 10
+			check_digit = 0
+			end
+			
+		array[12] == check_digit
+	end
+				

@@ -44,7 +44,10 @@ def test_for_an_X
 	assert_equal(true,check_digit_contains_x("080442957X"))
 end
 
-
+def test_to_check_for_13_digits
+	assert_equal(true,check_digit_valid_13("9780470059029"))
+	assert_equal(false,check_digit_valid_13("9780470009029"))
+end
 
 
 
