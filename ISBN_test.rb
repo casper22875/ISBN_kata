@@ -27,6 +27,23 @@ def test_for_10_digit_math
 	assert_equal(true,check_digit_validity(["0","3","2","1","1","4","6","5","3","0"]))
 end
 
+def test_for_everything_thus_far
+	results=isbn_check("12 3123123 1")
+	results2=isbn_check("0-321@14653-0")
+	results5=isbn_check("2334567")
+		assert_equal(false,results)
+		assert_equal(false,results2)
+		assert_equal(false,results5)
+	results3=isbn_check("0471958697")
+	results4=isbn_check("0-321-14653-0")
+		assert_equal(true,results3)
+		assert_equal(true,results4)
+end
+
+
+
+
+
 
 
 

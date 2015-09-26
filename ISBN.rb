@@ -1,6 +1,7 @@
 def isbn_check(isbn_number)
-	no_dashes_isbn_number =remove_dashes_from_isbn(isbn_number)
-	no_spaces_or_dashes_isbn_number=remove_dashes_from_isbn(no_dashes_isbn_number)
+	no_dashes_isbn_number =dash_removal_from_isbn(isbn_number)
+	no_spaces_or_dashes_isbn_number=dash_removal_from_isbn(no_dashes_isbn_number)
+	
 		if verify_length(no_spaces_or_dashes_isbn_number) == true
 		array_isbn=isbn_number_array(isbn_number)
 		check_digit_validity(array_isbn)
@@ -23,11 +24,13 @@ end
 def dash_removal_from_isbn(isbn_number)
 	if isbn_number.include?"-"
 		isbn_number.delete!"-"
+		else 
+		isbn_number
 	end
 end
 
 def space_removal_from_isbn(isbn_number)
-	if isbn_number.include?" "
+	if  isbn_number.include?" "
 		isbn_number.delete!" "
 	end
 end
