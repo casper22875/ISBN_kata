@@ -5,6 +5,8 @@ def isbn_check(isbn_number)
 		if verify_length(no_spaces_or_dashes_isbn_number) == true
 		array_isbn=isbn_number_array(isbn_number)
 		check_digit_validity(array_isbn)
+		check_digit_contains_x(isbn_number)
+		check_digit_valid_13(isbn_number)
 		true
 		else 
 		false
