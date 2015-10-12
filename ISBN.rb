@@ -18,10 +18,11 @@ def isbn_check(isbn_number)
     if check_digit_valid_13(no_spaces_or_dashes)
 	else 
 	false
+				end
+			end
 		end
 	end
-end
-		
+end		
 		# array_isbn=isbn_number_array(isbn_number)
 		# check_digit_validity(array_isbn)
 		# check_digit_contains_x(isbn_number)
@@ -133,4 +134,3 @@ def test_for_non_numeric_characters(no_specials)
       true
   end 
 end
-end end
