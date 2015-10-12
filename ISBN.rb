@@ -11,17 +11,15 @@ def isbn_check(isbn_number)
   check_digit_validity(no_spaces_or_dashes) 
     end
   
-  else no_spaces_or_dashes.length == 13
+  if no_spaces_or_dashes.length == 13
 	check_digit_contains_x(no_spaces_or_dashes)
     if !test_for_non_numeric_characters(no_spaces_or_dashes)
       @output = false
-    else
-    check_digit_valid_13(no_spaces_or_dashes)
-    end
-  #elsif false
-
-  end
- 
+    if check_digit_valid_13(no_spaces_or_dashes)
+	else 
+	false
+		end
+	end
 end
 		
 		# array_isbn=isbn_number_array(isbn_number)
@@ -35,10 +33,10 @@ end
 # end
 
 def remove_spaces_and_dashes(isbn_number)
-	disallowed_characters = [ ' ', '-']
+	disallowed_characters = [" ","-"]
 	
-	disallowed_characters.each do |c|
-		isbn_number.delete! c if isbn_number.include? c
+	disallowed_characters.each do |n|
+		isbn_number.delete! n if isbn_number.include? n
 	end
 	isbn_number
 end
@@ -134,5 +132,5 @@ def test_for_non_numeric_characters(no_specials)
     #return
       true
   end 
-
 end
+end end

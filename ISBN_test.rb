@@ -10,11 +10,11 @@ def test_for_valid_amount_of_digits
 end
 
 def test_to_check_for_dash_removal
-	assert_equal("0321146530",remove_spaces_and_dashes_from_isbn("0-321-14653-0"))
+	assert_equal("0321146530",remove_spaces_and_dashes("0-321-14653-0"))
 end
 
 def test_to_check_for_space_removal
-	assert_equal("0321146530",remove_spaces_and_dashes_from_isbn("0 321 14653 0"))
+	assert_equal("0321146530",remove_spaces_and_dashes("0 321 14653 0"))
 end
 
 def test_for_string_conversion
