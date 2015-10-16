@@ -17,6 +17,14 @@ def test_to_check_for_space_removal
 	assert_equal("0321146530",remove_spaces_and_dashes("0 321 14653 0"))
 end
 
+def test_to_check_for_spaces_and_dashes
+	assert_equal("0321146530",remove_spaces_and_dashes("0 321-14653 0"))
+end
+
+def test_to_check_for_no_spaces_or_dashes
+	assert_equal("0321146530",remove_spaces_and_dashes("0321146530"))
+end
+
 def test_for_string_conversion
 	assert_equal(["1","2","3","4","5","6","7","8","9","1"],isbn_number_array("1234567891"))
 end
@@ -41,7 +49,10 @@ def test_for_everything_thus_far
 end
 
 def test_for_an_X
-	assert_equal(true,check_digit_contains_x("080442957X"))
+	assert_equal(["0","8","0","4","4","2","9","5","7","10"],check_digit_contains_x("080442957X"))
+	assert_equal(["0","8","0","4","4","2","9","5","7","10"],check_digit_contains_x("080442957x"))
+	assert_equal(["0","8","0","4","4","2","9","5","7","1"],check_digit_contains_x("0804429571"))
+	assert_equal(["0","8","0","4","4","2","X","5","7","1"],check_digit_contains_x("080442X571"))
 end
 
 def test_to_check_for_13_digits
